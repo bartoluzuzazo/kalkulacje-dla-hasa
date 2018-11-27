@@ -1,0 +1,116 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Plus()
+        {
+            Console.WriteLine("Wpisz 1 liczbę");
+            int x =
+                Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Wpisz 2 liczbę");
+            int z =
+                Convert.ToInt32(Console.ReadLine());
+            if (z >= 0)
+            {
+                int w = x + z;
+                Console.WriteLine("Wynik");
+                Console.WriteLine(w);
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("err");
+            }
+        }
+        static void Minus()
+        {
+            Console.WriteLine("Wpisz 1 liczbę");
+            int x =
+                Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Wpisz 2 liczbę");
+            int z =
+                Convert.ToInt32(Console.ReadLine());
+            int w = x-z;
+            Console.WriteLine("Wynik");
+            Console.WriteLine(w);
+            Console.WriteLine();
+        }
+        static void Mno()
+        {
+            Console.WriteLine("Wpisz 1 liczbę");
+            int x =
+                Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Wpisz 2 liczbę");
+            int z =
+                Convert.ToInt32(Console.ReadLine());
+            int w = x * z;
+            Console.WriteLine("Wynik");
+            Console.WriteLine(w);
+            Console.WriteLine();
+        }
+        static void Dzie()
+        {
+            Console.WriteLine("Wpisz 1 liczbę");
+            int x =
+                Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Wpisz 1 liczbę");
+            int z =
+                Convert.ToInt32(Console.ReadLine());
+            if (z == 0)
+            {
+                Console.WriteLine("err");
+            }
+            if (z > 0)
+            {
+                int w = x / z;
+                Console.WriteLine("Wynik");
+                Console.WriteLine(w);
+                Console.WriteLine();
+            }
+            
+        }
+        static void Main(string[] args)
+        {
+            bool quit = true;
+            Console.WriteLine("Siema hasu, wybierz działanie, które chcesz przeprowadzić");
+            for (; quit == true;)
+            {
+                Console.WriteLine("1 - dodawanie");
+                Console.WriteLine("2 - odejmowanie");
+                Console.WriteLine("3 - mnożenie");
+                Console.WriteLine("4 - dzielenie");
+                Console.WriteLine("5 - wyjdź");
+                int y =
+                    Convert.ToInt32(Console.ReadLine());
+                if (y == 1)
+                {
+                    Plus();
+                }
+                if (y == 2)
+                {
+                    Minus();
+                }
+                if (y == 3)
+                {
+                    Mno();
+                }
+                if (y == 4)
+                {
+                    Dzie();
+                }
+                if (y == 5)
+                {
+                    quit = true;
+                    break;
+                }
+            }
+
+        }
+    }
+}
